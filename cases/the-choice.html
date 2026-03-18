@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Case study: The Choice — an interactive moral philosophy game inspired by the Harvard Justice course."
+    />
+    <title>Case study — The Choice</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#content">Skip to content</a>
+
+    <header class="site-header">
+      <div class="wrap">
+        <div class="topbar" aria-label="Site header">
+          <a class="brand" href="../" aria-label="Home">
+            <span class="dot" aria-hidden="true"></span>
+            <span class="name">Alex Shlykov</span>
+          </a>
+          <nav class="nav" aria-label="Primary">
+            <a href="../">Home</a>
+            <a href="../#projects">Projects</a>
+            <a href="../#contacts">Contacts</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main id="content">
+      <div class="wrap">
+        <section class="case-hero" aria-label="Case study hero">
+          <a class="breadcrumb" href="../">← Back to homepage</a>
+          <h1>The Choice: Moral Dilemma Game (beta)</h1>
+          <p class="subtitle">
+            A case study about turning moral philosophy into a small interactive
+            experience built around choices, tension, and reflection.
+          </p>
+          <a
+            class="cta"
+            href="https://buildtounderstand.dev/thechoice/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Open / Play</a
+          >
+
+          <div class="case-placeholder" aria-label="Project image">
+            <img
+              src="../assets/thechoice.png"
+              alt="Preview image for The Choice: Moral Dilemma Game (beta)"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </section>
+
+        <section class="case-body panel" aria-label="Case study content">
+          <h2>Goal</h2>
+          <p>
+            The goal of this project was to gamify ideas from the Harvard course
+            <a
+              href="https://justiceharvard.org/justicecourse/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Justice</a
+            >.
+          </p>
+          <p>
+            I wanted to explore whether ideas about justice could be learned
+            through interaction instead of lecture format.
+          </p>
+          <p>
+            At first I thought about making a game based on the whole course.
+            What came out in the end was closer to a teaser — a smaller
+            interactive experience inspired by the course, with some additional
+            moral dilemmas that were not directly discussed there.
+          </p>
+          <h2>Main contradictions</h2>
+          <p>I decided to focus on two fundamental tensions:</p>
+          <ul>
+            <li><strong>Utilitarianism vs Deontology</strong></li>
+            <li><strong>Freedom vs Security</strong></li>
+          </ul>
+
+          <h2>Prototypes</h2>
+          <p>
+            I built three prototypes before finding the approach that worked
+            best:
+          </p>        
+          <ul>
+            <li>
+              <strong>Version 1.</strong> A lecture-like format with the main
+              ideas explained in portions.
+            </li>
+            <li>
+              <strong>Version 2.</strong> A simple list of dilemmas where the
+              player just had to make decisions.
+            </li>
+            <li>
+              <strong>Version 3.</strong> A middle ground — the player makes
+              choices and those choices influence the final result.
+            </li>
+          </ul>
+          <p>
+            The third version felt right because it connected reflection with
+            consequences.
+          </p>
+          <figure class="case-image">
+            <img src="../assets/thechoice2.png" loading="lazy" />
+          </figure>  
+
+          <h2>Main design idea</h2>
+          <p>
+            One of my main goals was to show that no approach to justice is the
+            single correct one.
+          </p>
+          <p>
+            That is why the game often pushes back against your choices and
+            offers another point of view. It took time to write all of these
+            responses, but this became one of the parts I like most in the final
+            result.
+          </p>
+          <figure class="case-image">
+            <img src="../assets/thechoice4.png" loading="lazy" />
+          </figure>          
+
+          <h2>Core mechanic</h2>
+          <p>The mechanic is intentionally very simple.</p>
+          <p>
+            The player makes choices. Almost every choice adds some value to one
+            or several hidden variables. These variables represent different
+            ethical directions.
+          </p>
+          <figure class="case-image">
+            <img src="../assets/thechoice5.png" loading="lazy" />
+          </figure>          
+          <p>
+            At the end of the game, the player sees a result showing which
+            ethical approach is closest to them based on their answers.
+          </p>
+          <figure class="case-image">
+            <img src="../assets/thechoice6.png" loading="lazy" />
+          </figure>          
+          <p>
+            What matters to me is that the ending depends on the player’s
+            decisions. That connection helps reinforce the idea that our choices
+            matter and that they have consequences.
+          </p>
+
+          <h2>Story</h2>
+          <p>
+            To make the experience more interesting and to give the player more
+            agency, I built a story where the player teaches an AI about human
+            ethics.
+          </p>
+          <figure class="case-image">
+            <img src="../assets/thechoice7.png" loading="lazy" />
+          </figure>          
+          <p>
+            This works well because the AI can ask “stupid” questions. It plays
+            a role similar to Dr. Watson — helping reveal the player’s thinking
+            through questions we rarely ask ourselves in everyday life.
+          </p>
+
+          <h2>Visual style</h2>
+          <p>
+            I chose watercolor-style illustrations to create a feeling of blurred
+            edges.
+          </p>
+          <p>
+            Moral dilemmas do not have one clear correct answer — they only have
+            different ways of responding. The watercolor look helps communicate
+            that feeling quickly on a visual level.
+          </p>
+
+          <h2>Music</h2>
+          <p>
+            I tested more than twenty tracks while looking for the right tone.
+          </p>
+          <p>
+            At first I thought the music should support a serious atmosphere. In
+            the end, I chose a slightly ironic jazz track so the game would not
+            feel too heavy or dark.
+          </p>
+          <p>
+            The mood is closer to something in the spirit of Woody Allen films —
+            a bit funny, a bit sad, and still serious underneath.
+          </p>
+
+          <h2>Learning is hidden</h2>
+          <p>
+            One of the things I wanted most was to keep the educational part
+            embedded inside the experience.
+          </p>
+          <p>
+            The player is not simply told what theories mean. Instead, they move
+            through dilemmas, make choices, and only then see how different
+            ethical viewpoints interpret those decisions.
+          </p>
+          <figure class="case-image">
+            <img src="../assets/thechoice8.png" loading="lazy" />
+          </figure>          
+
+          <h2>UI</h2>
+          <p>Simple, but informative.</p>
+          <p>
+            I wanted the interface to stay readable and calm, so the player’s
+            attention would remain on the dilemma itself rather than on the
+            interface.
+          </p>
+
+          <h2>Color logic</h2>
+          <p>
+            Each ethical direction has its own color. This helps the player
+            intuitively read the system and understand that different ideas are
+            being tracked in parallel.
+          </p>
+
+          <h2>Ending and replayability</h2>
+          <p>
+            One of the most important parts of the project is the ending. After
+            I added it, replayability doubled and people started sharing the
+            game with friends more often.
+          </p>
+          <p>I added two things:</p>
+          <ul>
+            <li>
+              <strong>The end of the story</strong> — a description of how the
+              civilization will develop based on the player’s choices.
+            </li>
+            <li>
+              <strong>The player’s moral compass</strong> — a result showing
+              which ethical theories are closest to them.
+            </li>
+          </ul>
+          <figure class="case-image">
+            <img src="../assets/thechoice9.png" loading="lazy" />
+          </figure>           
+          <p>
+            Both of these helped make the connection between choices and outcome
+            much stronger.
+          </p>
+
+          <h2>Tools</h2>
+          <ul>
+            <li>
+              <strong>Decision tree / story engine:</strong>
+              <a
+                href="https://twinery.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Twine</a
+              >
+            </li>
+            <li><strong>Images:</strong> ChatGPT</li>
+            <li><strong>Music:</strong> BrevAI</li>
+          </ul>
+
+          <h2>Try it</h2>
+          <p>
+            Play it once quickly. Then replay and intentionally choose
+            differently — the contrast makes the underlying ethical tensions much
+            easier to notice.
+          </p>
+          <p>
+            <a
+              class="primary-link"
+              href="https://buildtounderstand.dev/thechoice/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Play The Choice</a
+            >
+          </p>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <div aria-label="Footer note">
+          If you have a favorite moral dilemma, send it my way.
+        </div>
+      </div>
+    </footer>
+
+    <script src="../script.js" defer></script>
+  </body>
+</html>
