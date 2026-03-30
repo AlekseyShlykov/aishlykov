@@ -285,4 +285,49 @@ document.addEventListener("DOMContentLoaded", () => {
 
     showStep("result");
   }
+
+  const emailForm = document.getElementById("quiz-email-form");
+  if (emailForm) {
+    emailForm.addEventListener("submit", async (e) => {
+      if (location.protocol === "file:") return;
+      e.preventDefault();
+
+      const btn = emailForm.querySelector('button[type="submit"]');
+      const status = document.getElementById("quiz-email-status");
+      const fd = new FormData(emailForm);
+
+      if (btn) btn.disabled = true;
+      if (status) status.textContent = "";
+
+      const quizContext = Object.entries(answers)
+        .map(([q, a]) => `Q${+q + 1}:${a}`)
+        .join(", ");
+      fd.set("message", `[quiz lead] ${quizContext}`);
+
+      saveContactSubmission({
+        name: "",
+        email: String(fd.get("email") || "").trim(),
+        message: fd.get("message"),
+      });
+
+      const action = emailForm.getAttribute("action") || "";
+      try {
+        const res = await fetch(action, {
+          method: "POST",
+          headers: { Accept: "application/json" },
+          body: fd,
+        });
+        if (res.ok) {
+          emailForm.reset();
+          if (status) status.textContent = "Thanks! We'll be in touch.";
+        } else {
+          throw new Error("Bad response");
+        }
+      } catch {
+        if (status) status.textContent = "Could not send. Try emailing us directly.";
+      } finally {
+        if (btn) btn.disabled = false;
+      }
+    });
+  }
 });

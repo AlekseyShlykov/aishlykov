@@ -104,10 +104,7 @@
               <p>AI-first studio. We build interactive explainers, games, and quizzes for businesses. Days, not months.</p>
               <p>Got a product guide nobody reads? We'll turn it into something interactive. Need a quiz for lead gen? We build those too.</p>
               <p>We work with JTBD, Lean Startup, Design Sprints, and Design Thinking frameworks. We move fast.</p>
-              <p>
-                Founded by Alex Shlykov.
-                <a href="https://buildtounderstand.dev" target="_blank" rel="noopener noreferrer">buildtounderstand.dev</a>.
-              </p>
+              <p>Founded by Alex Shlykov.</p>
               <div class="quiz-cta-block">
                 <p class="quiz-cta-label">You could scroll through all of this. Or just answer 4 quick questions.</p>
                 <button class="quiz-trigger" id="quiz-open" type="button">Start &rarr;</button>
@@ -383,6 +380,19 @@
           <p id="quiz-result-text"></p>
           <p class="quiz-result-hook">See the difference? You just experienced it.</p>
           <a class="cta" id="quiz-result-cta" href="#">See examples &rarr;</a>
+
+          <div class="quiz-email-block">
+            <p class="quiz-email-label">Want us to reach out? Leave your email.</p>
+            <form class="quiz-email-form" id="quiz-email-form" action="https://formspree.io/f/mnjglpyz" method="POST">
+              <input type="hidden" name="name" value="" />
+              <input type="hidden" name="message" value="[quiz lead]" />
+              <div class="quiz-email-row">
+                <input type="email" name="email" placeholder="your@email.com" required />
+                <button type="submit">Send</button>
+              </div>
+            </form>
+            <p class="quiz-email-status" id="quiz-email-status" aria-live="polite"></p>
+          </div>
         </div>
       </div>
     </div>
