@@ -1,0 +1,41 @@
+# Build to Understand Studio
+
+> AI-first studio that builds interactive learning experiences for products and marketing.
+
+## What we do
+
+We create interactive explainers, educational games, and marketing quizzes that help businesses explain complex products, teach concepts, and engage audiences. We offer both fast AI prototyping and full production with designers and developers.
+
+## Services
+
+- Interactive Explainers & Learning Games: playable product explainers, educational games, interactive lessons, turning guides and documentation into interactive experiences.
+- Marketing Quizzes: lead generation quizzes, product discovery quizzes, interactive campaign content.
+
+## How we work
+
+1. Define the goal — short conversation about what you want to achieve.
+2. Prototype the idea — we propose 3 interactive concepts and pick one direction together.
+3. Build the experience — we design and build based on the chosen concept.
+4. Launch — you receive the finished project; we can help with analytics and campaigns.
+5. Improve — we refine based on real user data and feedback.
+
+We use JTBD, Lean Startup, Design Sprints, Design Thinking, and other proven frameworks.
+We can move fast with AI prototyping, or do classic production work with designers and developers.
+
+## Portfolio
+
+- The Evolution of Civilizations: interactive story about the rise of civilizations — https://buildtounderstand.dev/theworld/
+- The Choice: Moral Dilemma Game: interactive journey through moral philosophy — https://buildtounderstand.dev/thechoice/
+- How the Brain Shapes Behavior: quiz about the triune brain model — https://buildtounderstand.dev/thebrain/
+- Hobby Finder: personality-based quiz for discovering hobbies — https://thefennecbox.com/
+
+## Founded by
+
+Alex Shlykov — https://buildtounderstand.dev
+
+## Contact
+
+- Email: buildtounderstand@gmail.com
+- LinkedIn: https://www.linkedin.com/in/aishlykov/
+- Calendly: https://calendly.com/buildtounderstand/30min
+- Website: https://buildtounderstand.studio

@@ -135,3 +135,121 @@ document.querySelectorAll(".case-testimonials").forEach((section) => {
     track.scrollBy({ left: getScrollAmount(), behavior: "smooth" });
   });
 });
+
+/* ── Quiz ── */
+
+document.addEventListener("DOMContentLoaded", () => {
+  const overlay = document.getElementById("quiz-overlay");
+  const openBtn = document.getElementById("quiz-open");
+  const closeBtn = document.getElementById("quiz-close");
+  const bar = document.getElementById("quiz-bar");
+
+  if (!overlay || !openBtn) return;
+
+  const steps = overlay.querySelectorAll(".quiz-step");
+  const totalQ = 4;
+  let current = 0;
+  const answers = {};
+
+  function showStep(idx) {
+    steps.forEach((s) => (s.hidden = true));
+    const target = overlay.querySelector(`[data-step="${idx}"]`);
+    if (target) {
+      target.hidden = false;
+      const pct = idx === "result" ? 100 : ((idx + 1) / totalQ) * 100;
+      bar.style.width = pct + "%";
+    }
+  }
+
+  function open() {
+    current = 0;
+    Object.keys(answers).forEach((k) => delete answers[k]);
+    showStep(0);
+    bar.style.width = "0%";
+    overlay.classList.add("is-open");
+    overlay.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  }
+
+  function close() {
+    overlay.classList.remove("is-open");
+    overlay.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+  }
+
+  openBtn.addEventListener("click", open);
+  closeBtn.addEventListener("click", close);
+  overlay.addEventListener("click", (e) => {
+    if (e.target === overlay) close();
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && overlay.classList.contains("is-open")) close();
+  });
+
+  overlay.querySelectorAll(".quiz-options button").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const step = btn.closest(".quiz-step");
+      const stepIdx = Number(step.dataset.step);
+      answers[stepIdx] = btn.dataset.value;
+
+      if (stepIdx < totalQ - 1) {
+        current = stepIdx + 1;
+        showStep(current);
+      } else {
+        showResult();
+      }
+    });
+  });
+
+  function showResult() {
+    const type = answers[0];
+    const priority = answers[3];
+
+    const titleEl = document.getElementById("quiz-result-title");
+    const textEl = document.getElementById("quiz-result-text");
+    const ctaEl = document.getElementById("quiz-result-cta");
+
+    let title = "Yes, we can help!";
+    let text = "";
+    let href = "#services";
+    let ctaLabel = "See examples";
+
+    if (type === "quiz" || priority === "conversions") {
+      text =
+        "A marketing quiz sounds like a great fit. We can build a lead-gen quiz that qualifies prospects and drives conversions.";
+      href = "#quizzes";
+      ctaLabel = "See quiz examples";
+    } else if (type === "explainer" || type === "unsure") {
+      text =
+        "An interactive explainer would work well for you. We turn complex products and ideas into engaging walkthroughs people actually finish.";
+      href = "#longreads";
+      ctaLabel = "See explainer examples";
+    } else if (type === "game") {
+      text =
+        "An educational game is a great way to teach through play. We've built several — from moral philosophy to brain science.";
+      href = "#longreads";
+      ctaLabel = "See game examples";
+    }
+
+    if (priority === "speed") {
+      text += " We can prototype fast with AI — expect a working concept in days, not months.";
+    } else if (priority === "quality") {
+      text += " Our team of designers and developers will make it look and feel premium.";
+    }
+
+    titleEl.textContent = title;
+    textEl.textContent = text;
+    ctaEl.textContent = ctaLabel + " →";
+    ctaEl.href = href;
+
+    ctaEl.addEventListener(
+      "click",
+      () => {
+        close();
+      },
+      { once: true }
+    );
+
+    showStep("result");
+  }
+});
