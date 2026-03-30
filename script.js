@@ -136,6 +136,28 @@ document.querySelectorAll(".case-testimonials").forEach((section) => {
   });
 });
 
+/* ── Burger menu ── */
+
+document.addEventListener("DOMContentLoaded", () => {
+  const burger = document.getElementById("burger");
+  const nav = document.getElementById("nav");
+  if (!burger || !nav) return;
+
+  burger.addEventListener("click", () => {
+    const open = nav.classList.toggle("is-open");
+    burger.setAttribute("aria-expanded", String(open));
+    burger.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+  });
+
+  nav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      nav.classList.remove("is-open");
+      burger.setAttribute("aria-expanded", "false");
+      burger.setAttribute("aria-label", "Open menu");
+    });
+  });
+});
+
 /* ── Quiz ── */
 
 document.addEventListener("DOMContentLoaded", () => {
