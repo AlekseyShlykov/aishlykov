@@ -77,10 +77,17 @@
         body: fd,
       });
 
-      if (!res.ok) throw new Error("Bad response");
-
-      form.reset();
-      if (status) status.textContent = "Thanks! Message sent.";
+      if (res.ok) {
+        form.reset();
+        if (status) status.textContent = "Thanks! Message sent.";
+      } else {
+        const data = await res.json();
+        if (data && data.errors) {
+          if (status) status.innerHTML = data.errors.map(e => e.message).join(", ");
+        } else {
+          throw new Error("Bad response");
+        }
+      }
     } catch {
       if (status) {
         status.innerHTML =
