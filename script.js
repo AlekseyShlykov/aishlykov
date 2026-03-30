@@ -1,5 +1,31 @@
+function saveContactSubmission(payload) {
+  try {
+    const existing = JSON.parse(localStorage.getItem("contact_submissions") || "[]");
+    existing.unshift({ ...payload, at: new Date().toISOString() });
+    localStorage.setItem("contact_submissions", JSON.stringify(existing.slice(0, 25)));
+  } catch {
+    // ignore storage errors
+  }
+}
+
+function toMailto({ name, email, message }) {
+  const subject = `Project inquiry from ${name || "website"}`;
+  const body = [
+    `Name: ${name || ""}`,
+    `Email: ${email || ""}`,
+    "",
+    message || "",
+  ].join("\n");
+
+  const params = new URLSearchParams({
+    subject,
+    body,
+  });
+
+  return `mailto:buildtounderstand@gmail.com?${params.toString()}`;
+}
+
 (() => {
-  // Small nicety: for in-page anchor navigation, focus the target so keyboard users land "inside" the section.
   function focusAnchorTarget(hash) {
     if (!hash || hash.length < 2) return;
     const id = decodeURIComponent(hash.slice(1));
@@ -11,33 +37,6 @@
 
   window.addEventListener("hashchange", () => focusAnchorTarget(location.hash), { passive: true });
   window.addEventListener("DOMContentLoaded", () => focusAnchorTarget(location.hash), { once: true });
-
-  function saveContactSubmission(payload) {
-    try {
-      const existing = JSON.parse(localStorage.getItem("contact_submissions") || "[]");
-      existing.unshift({ ...payload, at: new Date().toISOString() });
-      localStorage.setItem("contact_submissions", JSON.stringify(existing.slice(0, 25)));
-    } catch {
-      // ignore storage errors
-    }
-  }
-
-  function toMailto({ name, email, message }) {
-    const subject = `Project inquiry from ${name || "website"}`;
-    const body = [
-      `Name: ${name || ""}`,
-      `Email: ${email || ""}`,
-      "",
-      message || "",
-    ].join("\n");
-
-    const params = new URLSearchParams({
-      subject,
-      body,
-    });
-
-    return `mailto:buildtounderstand@gmail.com?${params.toString()}`;
-  }
 
   async function submitContactForm(form) {
     const status = document.getElementById("contact-form-status");
@@ -304,14 +303,13 @@ document.addEventListener("DOMContentLoaded", () => {
         .join(", ");
       fd.set("message", `[quiz lead] ${quizContext}`);
 
-      saveContactSubmission({
-        name: "",
-        email: String(fd.get("email") || "").trim(),
-        message: fd.get("message"),
-      });
-
       const action = emailForm.getAttribute("action") || "";
       try {
+        saveContactSubmission({
+          name: "",
+          email: String(fd.get("email") || "").trim(),
+          message: fd.get("message"),
+        });
         const res = await fetch(action, {
           method: "POST",
           headers: { Accept: "application/json" },

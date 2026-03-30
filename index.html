@@ -292,6 +292,7 @@
               method="POST"
               aria-label="Contact form"
             >
+              <input type="hidden" name="_subject" value="New contact from buildtounderstand.studio" />
               <div class="contact-form-grid">
                 <label class="field">
                   <span class="label">Name</span>
@@ -383,7 +384,8 @@
           <div class="quiz-email-block">
             <p class="quiz-email-label">Want us to reach out? Leave your email.</p>
             <form class="quiz-email-form" id="quiz-email-form" action="https://formspree.io/f/mnjglpyz" method="POST">
-              <input type="hidden" name="name" value="" />
+              <input type="hidden" name="_subject" value="New quiz lead from buildtounderstand.studio" />
+              <input type="hidden" name="name" value="Quiz visitor" />
               <input type="hidden" name="message" value="[quiz lead]" />
               <div class="quiz-email-row">
                 <input type="email" name="email" placeholder="your@email.com" required />
