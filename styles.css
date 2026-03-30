@@ -557,7 +557,7 @@ section[id]{
 /* ── Footer ── */
 
 footer{
-  padding: 28px 0 48px;
+  padding: 28px 0 calc(48px + env(safe-area-inset-bottom, 0px));
   color: var(--muted);
   font-size: 14px;
   border-top: 1px solid var(--border);
@@ -745,13 +745,51 @@ footer{
   .contact-links{ grid-template-columns: 1fr; }
   .contact-form-grid{ grid-template-columns: 1fr; }
   .field-full{ grid-column: 1; }
+
+  .panel{ padding: 18px 16px; }
+
+  .nav a{
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+
+  .contact-form input,
+  .contact-form textarea{
+    font-size: 16px;
+  }
+
+  .quiz-modal{
+    padding: 24px 20px 22px;
+    max-height: calc(100dvh - 40px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .quiz-overlay{ padding: 12px; }
+  .quiz-options button{ padding: 12px 14px; font-size: 15px; }
+
+  .quiz-trigger{
+    width: 100%;
+    justify-content: center;
+    padding: 14px 24px;
+    font-size: 17px;
+  }
+  .quiz-cta-hint{
+    display: block;
+    margin: 8px 0 0;
+  }
 }
 @media (max-width: 520px){
-  .hero{ padding: 24px 18px; }
+  .hero{ padding: 22px 16px; }
   .hero h1{ font-size: 26px; }
+  .hero p{ font-size: 15px; }
   .card-body{ padding: 14px 14px 12px; }
   .topbar{ flex-direction: column; align-items: flex-start; gap: 8px; }
-  .nav{ justify-content: flex-start; gap: 2px; }
+  .nav{ justify-content: flex-start; gap: 2px; flex-wrap: wrap; }
+  .section-title{ font-size: 20px; }
+
+  .quiz-step h2{ font-size: 18px; }
+  .quiz-result h2{ font-size: 19px; }
+  .quiz-result-icon{ width: 44px; height: 44px; font-size: 22px; }
 }
 
 @media (max-width: 700px) {
@@ -931,6 +969,11 @@ footer{
   border-color: rgba(27,111,242,.3);
   box-shadow: 0 4px 14px rgba(27,111,242,.1);
   transform: translateY(-1px);
+}
+.quiz-options button:active{
+  transform: scale(.98);
+  background: #fff;
+  border-color: var(--accent);
 }
 .quiz-options button:focus-visible{
   outline: 3px solid var(--accent-soft);

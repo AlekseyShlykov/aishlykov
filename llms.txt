@@ -4,7 +4,7 @@
 
 ## What we do
 
-We create interactive explainers, educational games, and marketing quizzes that help businesses explain complex products, teach concepts, and engage audiences. We offer both fast AI prototyping and full production with designers and developers.
+We build interactive explainers, games, and quizzes for businesses. Fast AI prototyping or full production with designers and developers.
 
 ## Services
 
@@ -13,25 +13,25 @@ We create interactive explainers, educational games, and marketing quizzes that 
 
 ## How we work
 
-1. Define the goal — short conversation about what you want to achieve.
-2. Prototype the idea — we propose 3 interactive concepts and pick one direction together.
-3. Build the experience — we design and build based on the chosen concept.
-4. Launch — you receive the finished project; we can help with analytics and campaigns.
-5. Improve — we refine based on real user data and feedback.
+1. Define the goal. We talk about what you need.
+2. Prototype the idea. We come up with 3 concepts. You pick one.
+3. Build the experience. We design and build it.
+4. Launch. You get the finished project. We can help with analytics and campaigns.
+5. Improve. We look at real data and make it better.
 
-We use JTBD, Lean Startup, Design Sprints, Design Thinking, and other proven frameworks.
-We can move fast with AI prototyping, or do classic production work with designers and developers.
+We use JTBD, Lean Startup, Design Sprints, and Design Thinking.
+We can move fast with AI prototyping. Or do proper production with designers and developers.
 
 ## Portfolio
 
-- The Evolution of Civilizations: interactive story about the rise of civilizations — https://buildtounderstand.dev/theworld/
-- The Choice: Moral Dilemma Game: interactive journey through moral philosophy — https://buildtounderstand.dev/thechoice/
-- How the Brain Shapes Behavior: quiz about the triune brain model — https://buildtounderstand.dev/thebrain/
-- Hobby Finder: personality-based quiz for discovering hobbies — https://thefennecbox.com/
+- The Evolution of Civilizations: interactive story about the rise of civilizations. https://buildtounderstand.dev/theworld/
+- The Choice: Moral Dilemma Game: interactive journey through moral philosophy. https://buildtounderstand.dev/thechoice/
+- How the Brain Shapes Behavior: quiz about the triune brain model. https://buildtounderstand.dev/thebrain/
+- Hobby Finder: personality-based quiz for discovering hobbies. https://thefennecbox.com/
 
 ## Founded by
 
-Alex Shlykov — https://buildtounderstand.dev
+Alex Shlykov. https://buildtounderstand.dev
 
 ## Contact
 

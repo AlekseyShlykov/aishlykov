@@ -80,7 +80,7 @@
       if (!res.ok) throw new Error("Bad response");
 
       form.reset();
-      if (status) status.textContent = "Thanks — message sent.";
+      if (status) status.textContent = "Thanks! Message sent.";
     } catch {
       if (status) {
         status.innerHTML =
@@ -216,29 +216,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (type === "quiz" || priority === "conversions") {
       title = "You need a marketing quiz";
-      text = "Something people actually complete — and that turns curiosity into leads.";
+      text = "Something people actually finish. And that turns clicks into leads.";
       href = "#quizzes";
       ctaLabel = "Show me quiz examples";
     } else if (type === "explainer" || type === "unsure") {
       title = "You need an interactive explainer";
-      text = "A way to make complex ideas feel simple, clear, and engaging.";
+      text = "A way to make complex things feel simple.";
       href = "#longreads";
       ctaLabel = "Show me explainer examples";
     } else if (type === "game") {
       title = "You need an educational game";
-      text = "The kind people don't just read — they experience.";
+      text = "Something people don't just read. They play it.";
       href = "#longreads";
       ctaLabel = "Show me game examples";
     }
 
     if (priority === "speed") {
-      text += " We can prototype fast with AI — expect something real in days, not months.";
+      text += " We prototype with AI. Expect something real in days, not months.";
     } else if (priority === "quality") {
-      text += " Designed and built to feel premium — not like a template.";
+      text += " Designed and built to feel premium. Not like a template.";
     } else if (priority === "engagement") {
-      text += " Built to keep people clicking, exploring, and actually finishing.";
+      text += " Built so people actually stick around and finish.";
     } else if (priority === "conversions") {
-      text += " Optimized to turn attention into action.";
+      text += " Built to turn attention into action.";
     }
 
     titleEl.textContent = title;
