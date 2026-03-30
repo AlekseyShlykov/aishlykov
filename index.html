@@ -27,7 +27,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=3" />
+    <link rel="stylesheet" href="styles.css?v=4" />
 
     <script type="application/ld+json">
     {
@@ -106,8 +106,9 @@
                 <a href="https://buildtounderstand.dev" target="_blank" rel="noopener noreferrer">buildtounderstand.dev</a>.
               </p>
               <div class="quiz-cta-block">
-                <p class="quiz-cta-label">Don't want to read a boring website? Take a quiz and find out what you need.</p>
-                <button class="quiz-trigger" id="quiz-open" type="button">Take the quiz &rarr;</button>
+                <p class="quiz-cta-label">You could read this whole website&hellip; Or just take a 30-second quiz.</p>
+                <button class="quiz-trigger" id="quiz-open" type="button">Start &rarr;</button>
+                <span class="quiz-cta-hint">Takes ~30 seconds</span>
               </div>
             </div>
           </div>
@@ -331,42 +332,46 @@
         <div class="quiz-progress"><div class="quiz-progress-bar" id="quiz-bar"></div></div>
 
         <div class="quiz-step" data-step="0">
-          <h2 id="quiz-heading">What would you like to create?</h2>
+          <p class="quiz-step-count">Step 1 of 4</p>
+          <h2 id="quiz-heading">What are you trying to achieve?</h2>
           <div class="quiz-options">
-            <button data-value="explainer">An interactive explainer for a product or technology</button>
-            <button data-value="quiz">A quiz to generate leads or qualify prospects</button>
-            <button data-value="game">An educational game or interactive lesson</button>
-            <button data-value="unsure">I'm not sure yet — help me figure it out</button>
+            <button data-value="explainer">Explain a complex product simply</button>
+            <button data-value="quiz">Generate leads or qualify users</button>
+            <button data-value="game">Teach something in an engaging way</button>
+            <button data-value="unsure">Not sure yet — help me figure it out</button>
           </div>
         </div>
 
         <div class="quiz-step" data-step="1" hidden>
-          <h2>Do you have existing content?</h2>
+          <p class="quiz-step-count">Step 2 of 4</p>
+          <h2>How far along are you?</h2>
           <div class="quiz-options">
-            <button data-value="existing">Yes — guides, docs, or articles we want to make interactive</button>
-            <button data-value="idea">We have a rough idea but nothing written yet</button>
-            <button data-value="scratch">Starting from scratch — need everything</button>
-            <button data-value="data">We have data or research that needs visualizing</button>
+            <button data-value="existing">We already have content</button>
+            <button data-value="idea">We have an idea</button>
+            <button data-value="scratch">Starting from scratch</button>
+            <button data-value="data">We have data or research</button>
           </div>
         </div>
 
         <div class="quiz-step" data-step="2" hidden>
-          <h2>Who is the audience?</h2>
+          <p class="quiz-step-count">Step 3 of 4</p>
+          <h2>Who is this for?</h2>
           <div class="quiz-options">
-            <button data-value="b2b">Potential customers visiting our website</button>
-            <button data-value="b2c">General public or consumers</button>
+            <button data-value="b2b">People visiting our website</button>
+            <button data-value="b2c">A broad audience</button>
             <button data-value="edu">Students or learners</button>
             <button data-value="internal">Our internal team</button>
           </div>
         </div>
 
         <div class="quiz-step" data-step="3" hidden>
-          <h2>What's the top priority?</h2>
+          <p class="quiz-step-count">Step 4 of 4</p>
+          <h2>What matters most right now?</h2>
           <div class="quiz-options">
-            <button data-value="speed">Speed — launch it within weeks</button>
-            <button data-value="quality">Design quality — it should look premium</button>
-            <button data-value="engagement">Engagement — high completion and interaction rates</button>
-            <button data-value="conversions">Conversions — I need leads and sign-ups</button>
+            <button data-value="speed">Launch fast</button>
+            <button data-value="quality">Make it look amazing</button>
+            <button data-value="engagement">Keep people engaged</button>
+            <button data-value="conversions">Drive conversions</button>
           </div>
         </div>
 
@@ -374,12 +379,12 @@
           <div class="quiz-result-icon" aria-hidden="true">&#10003;</div>
           <h2 id="quiz-result-title"></h2>
           <p id="quiz-result-text"></p>
-          <p class="quiz-result-hook">See? Getting something useful through a playful experience feels way better than reading a wall of text. Let's figure out how we can help.</p>
+          <p class="quiz-result-hook">See the difference? You just experienced it.</p>
           <a class="cta" id="quiz-result-cta" href="#">See examples &rarr;</a>
         </div>
       </div>
     </div>
 
-    <script src="script.js?v=3" defer></script>
+    <script src="script.js?v=4" defer></script>
   </body>
 </html>

@@ -209,32 +209,36 @@ document.addEventListener("DOMContentLoaded", () => {
     const textEl = document.getElementById("quiz-result-text");
     const ctaEl = document.getElementById("quiz-result-cta");
 
-    let title = "Yes, we can help!";
+    let title = "";
     let text = "";
     let href = "#services";
     let ctaLabel = "See examples";
 
     if (type === "quiz" || priority === "conversions") {
-      text =
-        "A marketing quiz sounds like a great fit. We can build a lead-gen quiz that qualifies prospects and drives conversions.";
+      title = "You need a marketing quiz";
+      text = "Something people actually complete — and that turns curiosity into leads.";
       href = "#quizzes";
-      ctaLabel = "See quiz examples";
+      ctaLabel = "Show me quiz examples";
     } else if (type === "explainer" || type === "unsure") {
-      text =
-        "An interactive explainer would work well for you. We turn complex products and ideas into engaging walkthroughs people actually finish.";
+      title = "You need an interactive explainer";
+      text = "A way to make complex ideas feel simple, clear, and engaging.";
       href = "#longreads";
-      ctaLabel = "See explainer examples";
+      ctaLabel = "Show me explainer examples";
     } else if (type === "game") {
-      text =
-        "An educational game is a great way to teach through play. We've built several — from moral philosophy to brain science.";
+      title = "You need an educational game";
+      text = "The kind people don't just read — they experience.";
       href = "#longreads";
-      ctaLabel = "See game examples";
+      ctaLabel = "Show me game examples";
     }
 
     if (priority === "speed") {
-      text += " We can prototype fast with AI — expect a working concept in days, not months.";
+      text += " We can prototype fast with AI — expect something real in days, not months.";
     } else if (priority === "quality") {
-      text += " Our team of designers and developers will make it look and feel premium.";
+      text += " Designed and built to feel premium — not like a template.";
+    } else if (priority === "engagement") {
+      text += " Built to keep people clicking, exploring, and actually finishing.";
+    } else if (priority === "conversions") {
+      text += " Optimized to turn attention into action.";
     }
 
     titleEl.textContent = title;
